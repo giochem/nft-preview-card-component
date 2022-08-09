@@ -26,21 +26,20 @@ Users should be able to:
 
 ### Screenshot
 
-![](./design/review.png)
+![](./design/active-states.jpg)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [Live site](https://giochem.github.io/nft-preview-card-component/)
 
 ## My process
 
 ### Built with
 
 - Semantic HTML5 markup
+- reset css
 - CSS custom properties
 - Flex box
-- CSS Grid
 - Desktop-first workflow
 - SASS
 
@@ -59,7 +58,7 @@ Users should be able to:
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
+- Website - [Xuan Truong](https://giochem.github.io/my-page/)
+- Frontend Mentor - [@giochem](https://www.frontendmentor.io/profile/giochem)
 
 ## Acknowledgments
