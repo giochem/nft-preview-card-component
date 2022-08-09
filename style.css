@@ -1,0 +1,150 @@
+html {
+  font-size: 62.5%;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+body {
+  color: hsl(215deg, 51%, 70%);
+  font-size: 14px;
+  font-family: "Poppins", sans-serif;
+  line-height: 1.4;
+  background-color: hsl(217deg, 54%, 11%);
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: stretch;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.card {
+  background-color: hsl(216deg, 50%, 16%);
+  border: 2.5rem solid hsl(216deg, 50%, 16%);
+  border-radius: 12px;
+  margin: 8rem auto;
+  width: 35rem;
+  height: 60rem;
+}
+.card__image {
+  margin-bottom: 3rem;
+  position: relative;
+}
+.card__image img {
+  border-radius: 12px;
+}
+.card__image:hover {
+  filter: grayscale(70%) sepia(70%);
+  cursor: pointer;
+}
+.card__image:hover::before {
+  content: url("./images/svg/icon-view.svg");
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+}
+.card__title {
+  font-size: 18px;
+  color: hsl(0deg, 0%, 100%);
+  margin-bottom: 1rem;
+}
+.card__title:hover {
+  cursor: pointer;
+  color: hsl(178deg, 100%, 50%);
+}
+.card__decs {
+  margin-bottom: 2.5rem;
+}
+.card__info {
+  display: flex;
+  justify-content: space-between;
+  align-content: normal;
+  align-items: stretch;
+  border-bottom: 1px solid hsl(215deg, 32%, 27%);
+  padding-bottom: 4rem;
+  width: 100%;
+}
+.card__info li {
+  display: inline-flex;
+}
+.card__value img {
+  margin-right: 8px;
+}
+.card__value span {
+  color: hsl(178deg, 100%, 50%);
+}
+.card__expires img {
+  margin-right: 10px;
+}
+.card__auth {
+  display: flex;
+  justify-content: flex-start;
+  align-content: normal;
+  align-items: center;
+  padding-top: 2rem;
+  max-height: 6rem;
+}
+.card__avatar {
+  max-width: 35px;
+  margin-right: 2rem;
+}
+.card__creation span {
+  color: hsl(0deg, 0%, 100%);
+}
+.card__creation span:hover {
+  cursor: pointer;
+  color: hsl(178deg, 100%, 50%);
+}
+
+@media screen and (max-width: 1339px) {
+  body {
+    font-size: 18px;
+  }
+  .card {
+    width: 75rem;
+    height: 100rem;
+  }
+  .card__image img {
+    width: 100%;
+  }
+  .card__title {
+    font-size: 22px;
+  }
+}
+@media screen and (max-width: 767px) {
+  body {
+    font-size: 14px;
+  }
+  .card {
+    width: 35rem;
+    height: 60rem;
+    margin: 3rem auto;
+  }
+  .card__title {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 479px) {
+  .card {
+    border: 2rem solid hsl(216deg, 50%, 16%);
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

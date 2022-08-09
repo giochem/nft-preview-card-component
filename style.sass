@@ -1,0 +1,115 @@
+$soft-blue: hsl(215, 51%, 70%)
+$cyan: hsl(178, 100%, 50%)
+$white: hsl(0, 0%, 100%)
+$very-dark-blue-main-BG: hsl(217, 54%, 11%)
+$very-dark-blue-card-BG: hsl(216, 50%, 16%)
+$very-dark-blue-line: hsl(215, 32%, 27%)
+@mixin flex($justify: flex-start, $content: normal, $items: stretch)
+  display: flex
+  justify-content: $justify
+  align-content: $content
+  align-items: $items
+html 
+  font-size: 62.5% // 1rem = 10px
+*,
+*:before,
+*:after
+  box-sizing: border-box
+a
+  text-decoration: none
+img 
+  display: block
+  max-width: 100%
+body
+  color: $soft-blue
+  font-size: 14px
+  font-family: 'Poppins', sans-serif
+  line-height: 1.4
+  background-color: $very-dark-blue-main-BG
+.wrapper
+  @include flex(center,center)
+  max-width: 1440px
+  margin: 0 auto
+.card
+  background-color: $very-dark-blue-card-BG
+  border: 2.5rem solid $very-dark-blue-card-BG
+  border-radius: 12px
+  margin: 8rem auto
+  width: 35rem
+  height: 60rem
+  &__image
+    margin-bottom: 3rem
+    position: relative
+    img
+      border-radius: 12px
+    &:hover
+      filter: grayscale(70%) sepia(70%)
+      cursor: pointer
+      &::before
+        content: url('./images/svg/icon-view.svg')
+        position: absolute
+        transform: translate(-50%, -50%)
+        top: 50%
+        left: 50%
+  &__title
+    font-size: 18px
+    color: $white
+    margin-bottom: 1rem
+    &:hover
+      cursor: pointer
+      color: $cyan
+  &__decs
+    margin-bottom: 2.5rem
+  &__info
+    @include flex(space-between)
+    border-bottom: 1px solid $very-dark-blue-line
+    padding-bottom: 4rem
+    width: 100%
+    li
+      display: inline-flex
+  &__value
+    img
+      margin-right: 8px
+    span
+      color: $cyan
+  &__expires
+    img
+      margin-right: 10px
+  &__auth
+    @include flex(flex-start, normal, center)
+    padding-top: 2rem
+    max-height: 6rem
+  &__avatar
+    max-width: 35px
+    margin-right: 2rem
+  &__creation
+    span
+      color: $white
+      &:hover
+        cursor: pointer
+        color: $cyan
+// 1440 1366 1288 1024 768 480 320
+
+@media screen and (max-width: 1339px)  
+  body
+    font-size: 18px
+  .card
+    width: 75rem
+    height: 100rem
+    &__image
+      img
+        width: 100%
+    &__title
+      font-size: 22px
+@media screen and (max-width: 767px)  
+  body
+    font-size: 14px
+  .card
+    width: 35rem
+    height: 60rem
+    margin: 3rem auto
+    &__title
+      font-size: 18px
+@media screen and (max-width: 479px)
+  .card
+    border: 2rem solid $very-dark-blue-card-BG
